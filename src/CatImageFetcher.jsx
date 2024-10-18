@@ -25,13 +25,10 @@ const CatImageFetcher = () => {
     <div>
       <button onClick={fetchCatImages}>Fetch Cat Images</button>
 
-      {/* Loading state */}
       {loading && <p>Loading...</p>}
 
-      {/* Error state */}
       {error && <p>Error: {error}</p>}
 
-      {/* Display images */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', marginTop: '20px' }}>
         {data.map((cat, index) => (
           <div key={index} style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '10px', textAlign: 'center' }}>
